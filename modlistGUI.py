@@ -1,0 +1,128 @@
+from PyQt4 import QtCore, QtGui
+
+class Ui_mdlst(QtGui.QMainWindow):
+    def setupUi(self):
+        self.setObjectName("mdlst")
+        self.resize(540, 422)
+        self.setWindowTitle("Minecraft Forum ModList")
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("mdlst.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.setWindowIcon(icon)
+        self.main = QtGui.QWidget(self)
+        self.main.setObjectName("main")
+        self.name = QtGui.QLabel(self.main)
+        self.name.setGeometry(QtCore.QRect(8, 8, 524, 16))
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.MinimumExpanding, QtGui.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.name.sizePolicy().hasHeightForWidth())
+        self.name.setSizePolicy(sizePolicy)
+        self.name.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.name.setToolTip("")
+        self.name.setStatusTip("")
+        self.name.setWhatsThis("")
+        self.name.setAccessibleName("")
+        self.name.setAccessibleDescription("")
+        self.name.setText("")
+        self.name.setObjectName("name")
+        self.other = QtGui.QLabel(self.main)
+        self.other.setGeometry(QtCore.QRect(8, 28, 524, 16))
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.MinimumExpanding, QtGui.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.other.sizePolicy().hasHeightForWidth())
+        self.other.setSizePolicy(sizePolicy)
+        self.other.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.other.setToolTip("")
+        self.other.setStatusTip("")
+        self.other.setWhatsThis("")
+        self.other.setAccessibleName("")
+        self.other.setAccessibleDescription("")
+        self.other.setText("")
+        self.other.setObjectName("other")
+        self.link = QtGui.QLineEdit(self.main)
+        self.link.setGeometry(QtCore.QRect(8, 54, 524, 24))
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Maximum, QtGui.QSizePolicy.Minimum)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.link.sizePolicy().hasHeightForWidth())
+        self.link.setSizePolicy(sizePolicy)
+        self.link.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.link.setWhatsThis("")
+        self.link.setAccessibleName("")
+        self.link.setAccessibleDescription("")
+        self.link.setAutoFillBackground(True)
+        self.link.setInputMethodHints(QtCore.Qt.ImhNone)
+        self.link.setInputMask("")
+        self.link.setText("")
+        self.link.setFrame(True)
+        self.link.setReadOnly(True)
+        self.link.setObjectName("link")
+        self.desc = QtGui.QLabel(self.main)
+        self.desc.setGeometry(QtCore.QRect(8, 82, 524, 16))
+        self.desc.setText("")
+        self.desc.setObjectName("desc")
+        self.author = QtGui.QTextBrowser(self.main)
+        self.author.setGeometry(QtCore.QRect(8, 102, 128, 256))
+        self.author.setObjectName("author")
+        self.type = QtGui.QTextBrowser(self.main)
+        self.type.setGeometry(QtCore.QRect(140, 102, 128, 256))
+        self.type.setObjectName("type")
+        self.dependencies = QtGui.QTextBrowser(self.main)
+        self.dependencies.setGeometry(QtCore.QRect(272, 102, 128, 256))
+        self.dependencies.setObjectName("dependencies")
+        self.versions = QtGui.QTextBrowser(self.main)
+        self.versions.setGeometry(QtCore.QRect(404, 102, 128, 256))
+        self.versions.setObjectName("versions")
+        self.source = QtGui.QLineEdit(self.main)
+        self.source.setGeometry(QtCore.QRect(8, 362, 524, 24))
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Maximum, QtGui.QSizePolicy.Minimum)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.source.sizePolicy().hasHeightForWidth())
+        self.source.setSizePolicy(sizePolicy)
+        self.source.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.source.setWhatsThis("")
+        self.source.setAccessibleName("")
+        self.source.setAccessibleDescription("")
+        self.source.setAutoFillBackground(True)
+        self.source.setInputMethodHints(QtCore.Qt.ImhNone)
+        self.source.setInputMask("")
+        self.source.setText("")
+        self.source.setFrame(True)
+        self.source.setReadOnly(True)
+        self.source.setObjectName("source")
+        self.backward = QtGui.QPushButton(self.main)
+        self.backward.setGeometry(QtCore.QRect(8, 390, 114, 24))
+        self.backward.setObjectName("backward")
+        self.backward.setText("<")
+        self.nextward = QtGui.QPushButton(self.main)
+        self.nextward.setGeometry(QtCore.QRect(414, 390, 114, 24))
+        self.nextward.setObjectName("nextward")
+        self.nextward.setText(">")
+        self.iterator = QtGui.QLabel(self.main)
+        self.iterator.setGeometry(QtCore.QRect(126, 390, 288, 24))
+        self.iterator.setText("0\\0")
+        self.iterator.alignment()
+        self.iterator.setObjectName("iterator")
+        self.setCentralWidget(self.main)
+
+    def backPage(self):
+        try:
+            if self.backward.pressed(True):
+                return True
+            else:
+                return False
+        except:
+            pass
+
+    def nextPage(self):
+        try:
+            if self.nextward.pressed(True):
+                return True
+            else:
+                return False
+        except:
+            pass
+
+
