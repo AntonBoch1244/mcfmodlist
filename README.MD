@@ -13,3 +13,7 @@ What needed to execute?
         - sys
     + Qt 4
         - PyQt4
+
+Known Bugs:
+---
+    PyQt4 Not using Native Support "TODO:FIX THAT"
